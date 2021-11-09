@@ -1,0 +1,136 @@
+/* Breakpoints */
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (max-width: 75em) {
+      @content; /* Min 1200px */
+    }
+  } @else if $point == minxl {
+    @media (min-width: 75em) {
+      @content; /* Max 1200px */
+    }
+  } @else if $point == lg {
+    @media (max-width: 62em) {
+      @content; /* 992px */
+    }
+  } @else if $point == md {
+    @media (max-width: 48em) {
+      @content; /* 768px */
+    }
+  } @else if $point == sm {
+    @media (max-width: 34em) {
+      @content; /* 575px */
+    }
+  } @else if $point == mobile {
+    @media (max-width: 25em) {
+      @content;
+    }
+  } @else if $point == mobilexs {
+    @media (max-width: 21.875em) {
+      @content;
+    }
+  }
+}
+
+/* Box Sizing */
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+/* Border Radius */
+
+@mixin border-solid($width, $color) {
+  border: $width solid $color;
+}
+
+/* Border Radius */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+/* Center Block */
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font Size */
+
+@mixin font-size($size: 12, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+/* Line Height */
+
+@mixin line-height($height: 12, $base: 16) {
+  line-height: $height + px;
+  line-height: ($height / $base) * 1rem;
+}
+
+/* List Reset */
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* CSS Prefixer */
+
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+/* Absolute Position */
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
