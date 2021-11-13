@@ -1,0 +1,10 @@
+@use "../utilities/" as *;
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient($Soft-blue, $Soft-violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

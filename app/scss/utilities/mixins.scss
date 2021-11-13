@@ -93,6 +93,26 @@
   margin-right: auto;
 }
 
+/* Center Flex */
+
+@mixin center-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Space Around Flex */
+
+@mixin space-aroung-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flex-direction($direction){
+  display: flex;
+  flex-direction: $direction;
+}
+
 /* Font Size */
 
 @mixin font-size($size: 12, $base: 16) {

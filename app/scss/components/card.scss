@@ -1,0 +1,43 @@
+@use "../utilities/" as *;
+
+.card {
+  width: rem(920);
+  height: rem(509);
+  border-radius: rem(22);
+  background-color: white;
+
+  @include flex-direction(row);
+
+  &-accordion {
+    width: 50%;
+    padding: 43px 95px 43px 17px;
+    font-size: 12px;
+    font-family: $Kumbh-sans;
+
+    & > h1 {
+      padding: 28px 0px 28px 0px;
+    }
+
+    & > button {
+      width: 100%;
+      padding: 20px 0px 20px 0px;
+      background-color: white;
+      border: none;
+      text-align: start;
+    }
+
+    & > div {
+      display: none;
+    }
+
+    & > hr {
+      color: $Light-grayish-blue;
+    }
+  }
+
+  &-image {
+    background: no-repeat url("../../../images/bg-pattern-desktop.svg");
+    background-position: top 50% left 50%;
+    background-size: contain;
+  }
+}
