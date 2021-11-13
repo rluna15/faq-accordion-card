@@ -26,6 +26,10 @@
       text-align: start;
       display: flex;
       cursor: pointer;
+
+      &:hover {
+          color: $Soft-red;
+      }
     }
 
     &-panel {
@@ -38,6 +42,7 @@
   }
 
   &-image {
+      padding-right: 75px;
     background: no-repeat url("../../../images/bg-pattern-desktop.svg");
     background-position: top 50% left 50%;
     background-size: contain;
