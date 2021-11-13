@@ -28,7 +28,7 @@
       cursor: pointer;
 
       &:hover {
-          color: $Soft-red;
+        color: $Soft-red;
       }
     }
 
@@ -42,17 +42,23 @@
   }
 
   &-image {
-      padding-right: 75px;
     background: no-repeat url("../../../images/bg-pattern-desktop.svg");
-    background-position: top 50% left 50%;
-    background-size: contain;
+    background-position: 100% 70%;
+    // position: relative;
+
+    &-women {
+    }
+
+    &-box {
+        @include abs-position(40%, 0, 0, 22%);
+    }
   }
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 .arrow {
-    margin-left: auto;
+  margin-left: auto;
 }
