@@ -24,9 +24,11 @@
       background-color: white;
       border: none;
       text-align: start;
+      display: flex;
+      cursor: pointer;
     }
 
-    & > div {
+    &-panel {
       display: none;
     }
 
@@ -40,4 +42,12 @@
     background-position: top 50% left 50%;
     background-size: contain;
   }
+}
+
+.active {
+    display: block;
+}
+
+.arrow {
+    margin-left: auto;
 }
