@@ -45,14 +45,19 @@
 
   &-image {
     background: no-repeat url("../../../images/bg-pattern-desktop.svg");
-    background-position: 100% 70%;
-    // position: relative;
+    background-position: 115% 70%;
+    overflow: hidden;
+    position: relative;
 
-    /* &-women {
-    } */
+    &-women {
+      transform: translate(-15%, 20%)
+    }
 
     &-box {
-        @include abs-position(40%, 0, 0, 22%);
+      z-index: 3;
+      position: absolute;
+      top: 40%;
+      left: -20%;
     }
   }
 }
