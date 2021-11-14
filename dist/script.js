@@ -1,2 +1,2 @@
-"use strict";console.log("HELLO");var test=function(){console.log("this is a test")};
+"use strict";for(var btn=document.querySelectorAll(".card-accordion-btn"),panel=document.querySelectorAll(".card-accordion-panel"),_loop=function(t){btn[t].addEventListener("click",(function(){for(var e=0;e<btn.length;e++)btn[e].classList.contains("active-btn")?(btn[e].classList.remove("active-btn"),panel[e].classList.remove("active")):(panel[t].classList.toggle("active"),btn[t].classList.toggle("active-btn"))}))},i=0;i<btn.length;i++)_loop(i);
 //# sourceMappingURL=script.js.map
