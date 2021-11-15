@@ -46,11 +46,15 @@
   &-image {
     background: no-repeat url("../../../images/bg-pattern-desktop.svg");
     background-position: 115% 70%;
-    overflow: hidden;
     position: relative;
 
     &-women {
-      transform: translate(-15%, 20%)
+      overflow: hidden;
+      height: 100%;
+
+      & > img {
+        transform: translate(-15%, 20%);
+      }
     }
 
     &-box {
